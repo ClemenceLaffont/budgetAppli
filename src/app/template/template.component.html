@@ -1,0 +1,29 @@
+<section>
+    <h1 (click)="methode()">Formulaire</h1>
+    <label for="nom">Nom : 
+        <input type="text" [(ngModel)]="personne.nom"/>
+    </label>
+    <label for="prenom">Prénom : 
+        <input type="text" [(ngModel)]="personne.prenom"/>
+    </label>
+    <label for="age">Age : 
+        <input type="number" [(ngModel)]="personne.age"/>
+    </label>
+    <label for="nom">J'ai un chat : 
+        <input type="checkbox" [(ngModel)]="chat"/>
+    </label>
+    <section [hidden]="!chat">
+        <label for="nomChat">Nom du chat : 
+            <input type="text" [(ngModel)]="personne.chat.nom"/>
+        </label>
+        <label for="couleur">Couleur : 
+            <input type="text" [(ngModel)]="personne.chat.couleur"/>
+        </label>
+    </section>
+    <button (click)="show()"></button>
+</section>
+<fieldset>
+    
+</fieldset>
+
+
