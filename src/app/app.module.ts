@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TemplateComponent } from "./template/template.component";
 import { BouletestComponent } from './bouletest/bouletest.component';
+import { CompteurService } from "./shar/compteur/compteur.service";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,11 @@ import { BouletestComponent } from './bouletest/bouletest.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    CompteurService
+  ],
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }

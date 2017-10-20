@@ -1,6 +1,11 @@
-<p *ngIf="variable===true">
+<h1>ToDoList</h1>
+  <input type="text" [(ngModel)]="newTruc"/>
+  <button (click)="addTable()">add</button>
   <ul>
-    <li *ngFor="let item of table">{{item}}</li>
+    <li *ngFor="let item of table; index as clef">
+      {{item}}
+      <button (click)='remove(clef)'>nope</button>
+    </li>
   </ul>
   
-</p>
+

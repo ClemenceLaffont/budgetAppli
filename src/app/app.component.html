@@ -1,2 +1,7 @@
-<app-bouletest></app-bouletest>
-<app-template></app-template>
+<select [(ngModel)]="selectedPage">
+    <option value="form">formulaire</option>
+    <option value="todo">Todo List</option>
+</select>
+
+<app-bouletest *ngIf="selectedPage === 'todo'" ></app-bouletest>
+<app-template *ngIf="selectedPage === 'form'" ></app-template>
